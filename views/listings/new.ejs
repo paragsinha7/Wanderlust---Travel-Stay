@@ -4,7 +4,7 @@
     <div class="col-8 offset-2">
         <br>
     <h3>Create a new listing</h3> <br>
-        <form method="POST" action="/listings">
+        <form method="POST" action="/listings" novalidate class="needs-validation">
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -12,6 +12,7 @@
                         placeholder="enter title " 
                         type="text"
                         class="form-control"
+                        required
                 >
             </div>
             
@@ -21,6 +22,7 @@
                     placeholder="enter description" 
                     type="text"
                     class="form-control"
+                    required
                 ></textarea>
             </div>
             <div class="mb-3">
@@ -28,7 +30,9 @@
                 <input name="listing[image]" 
                     placeholder="enter URL/link" 
                     type="url" 
-                    class="form-control">
+                    class="form-control"
+                    required>
+                    
             </div>
 
             <div class="row">
@@ -37,14 +41,17 @@
                     <input name="listing[price]" 
                     placeholder="enter price" 
                     type="number"
-                    class="form-control">
+                    class="form-control"
+                    required>
+                    
                 </div>
                 <div class="mb-3 col-md-8">
                     <label for="location" class="form-label">Location</label>
                     <input name="listing[location]" 
                         placeholder="enter location" 
                         type="text"
-                        class="form-control">
+                        class="form-control"
+                        required>
                 </div>
             </div>
 
@@ -54,7 +61,8 @@
                 <input name="listing[country]" 
                 placeholder="enter country" 
                 type="text"
-                class="form-control">
+                class="form-control"
+                required>
 
             </div>
             <br><br>
